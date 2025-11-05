@@ -512,7 +512,22 @@ main {
     background-color: #3a3f3e;
 }
 
-
+#stakingPeriod {
+    /* Сбрасываем нативный стиль браузера, если он вызывает конфликт */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+    /* Гарантируем, что элемент находится выше всех */
+    z-index: 999; 
+    
+    /* Гарантируем, что нажатие (тап) не блокируется */
+    pointer-events: auto; 
+    
+    /* Снимаем ограничения, если они были установлены где-то еще */
+    max-height: none; 
+    overflow: visible; 
+}
 
 
 
@@ -935,4 +950,5 @@ footer {
     }
 
 }
+
 
